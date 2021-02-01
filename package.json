@@ -1,6 +1,6 @@
 {
   "name": "discover-path",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Check for the existence of a path in a case-sensitive manner and, if not found, suggest where it might be at",
   "main": "cjs/discover-path.js",
   "typings": "cjs/discover-path.d.ts",
