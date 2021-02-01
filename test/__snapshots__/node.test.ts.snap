@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mocked posix throw error with suggestions property on possible matches 1`] = `
+"ENOENT: no such file or directory, scandir '/foo/bar/baz'
+Did you mean:
+  - /foo/bAr/bAz
+  - /foo/bAr/BAZ"
+`;
+
+exports[`mocked posix throws on multiple matching paths (end) 1`] = `
+"ENOENT: no such file or directory, scandir '/Users/rexxars/webdev/Discover-Path'
+Did you mean:
+  - /Users/rexxars/webdev/discover-path
+  - /Users/rexxars/webdev/discover-Path"
+`;
+
+exports[`mocked win32 throw error with suggestions property on possible matches 1`] = `
+"ENOENT: no such file or directory, scandir 'C:\\\\foo\\\\bar\\\\baz'
+Did you mean:
+  - C:\\\\foo\\\\bAr\\\\bAz
+  - C:\\\\foo\\\\bAr\\\\BAZ"
+`;
+
+exports[`mocked win32 throws on multiple matching paths (end) 1`] = `"ENOENT: no such file or directory, scandir 'C:\\\\'"`;

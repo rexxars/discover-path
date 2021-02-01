@@ -1,0 +1,97 @@
+{
+  "name": "discover-path",
+  "version": "0.0.1",
+  "description": "Check for the existence of a path in a case-sensitive manner and, if not found, suggest where it might be at",
+  "main": "dist/discover-path.js",
+  "module": "dist/discover-path.mjs",
+  "typings": "dist/discover-path.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "prebuild": "rm -rf dist",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "posttest": "npm run lint",
+    "lint": "tsdx lint src",
+    "prepublishOnly": "npm run build && npm test",
+    "coverage": "tsdx test --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rexxars/discover-path.git"
+  },
+  "keywords": [
+    "path",
+    "exists",
+    "exist",
+    "file",
+    "filepath",
+    "fs",
+    "filesystem",
+    "file-system",
+    "access",
+    "stat",
+    "case",
+    "case-sensitive"
+  ],
+  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rexxars/discover-path/issues"
+  },
+  "homepage": "https://github.com/rexxars/discover-path#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.13",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-sanity": "^1.150.8",
+    "prettier": "^2.0.5",
+    "tsdx": "^0.14.1",
+    "typescript": "^3.0.0"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100,
+    "bracketSpacing": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "browser": false
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "sanity",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "operator-linebreak": "off",
+      "no-use-before-define": "off",
+      "no-sync": "off"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ]
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    }
+  }
+}
