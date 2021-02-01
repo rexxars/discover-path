@@ -41,5 +41,5 @@ jspm_packages
 *.sublime-workspace
 
 # Compiled output
-/dist
-
+/cjs
+/esm

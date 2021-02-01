@@ -1,9 +1,10 @@
 {
-  "include": ["src", "types"],
+  "include": ["src"],
   "compilerOptions": {
-    "module": "esnext",
-    "lib": ["dom", "esnext"],
-    "target": "ES2017",
+    "outDir": "cjs",
+    "module": "commonjs",
+    "lib": ["es2018"],
+    "target": "ES2018",
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
@@ -21,10 +22,8 @@
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "baseUrl": "./",
-    "paths": {
-      "*": ["src/*", "node_modules/*"]
-    },
-    "jsx": "react",
-    "esModuleInterop": true
+    "paths": {"*": ["src/*", "node_modules/*"]},
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
   }
 }

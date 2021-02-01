@@ -2,9 +2,9 @@
   "name": "discover-path",
   "version": "0.0.1",
   "description": "Check for the existence of a path in a case-sensitive manner and, if not found, suggest where it might be at",
-  "main": "dist/discover-path.js",
-  "module": "dist/discover-path.mjs",
-  "typings": "dist/discover-path.d.ts",
+  "main": "cjs/discover-path.js",
+  "typings": "cjs/discover-path.d.ts",
+  "module": "esm/discover-path.mjs",
   "sideEffects": false,
   "files": [
     "dist",
@@ -15,8 +15,8 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "prebuild": "rm -rf dist",
-    "build": "tsdx build",
+    "prebuild": "rm -rf cjs esm",
+    "build": "tsc && tsc -m es2020 --outDir esm && mv esm/discover-path.js esm/discover-path.mjs",
     "test": "tsdx test",
     "posttest": "npm run lint",
     "lint": "tsdx lint src",
